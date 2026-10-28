@@ -1,0 +1,62 @@
+﻿<Window x:Class="Employeeproject1.AdminDashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Employeeproject1"
+        mc:Ignorable="d"
+        Title="Admin Dashboard" Height="600" Width="700"
+        Background="Aquamarine">
+
+    <StackPanel Margin="50">
+        <TextBlock Text="Admin Dashboard"
+           FontSize="30"
+           FontWeight="Bold"
+           HorizontalAlignment="Center"
+           Margin="0,10,0,20"/>
+
+        <TextBlock Text="Welcome to NZFTC Aministration Portal"
+           FontSize="17"
+           FontWeight="Bold"
+           HorizontalAlignment="Center"
+           Margin="0,0,0,30"/>
+
+        <Button Content="Manage Employees"
+                Width= "250"
+                Height="45"
+                HorizontalAlignment="Center"
+                Margin="0,5"
+                Click="Employees_Click"/>
+
+        <Button Content="Leave Requests"
+           Width= "250"
+           Height="45"
+           HorizontalAlignment="Center"
+           Margin="0,5"
+           Click="LeaveRequests_Click"     />
+
+        <Button Content="Payroll Management"
+        Width= "250"
+        Height="45"
+        HorizontalAlignment="Center"
+        Margin="0,5"
+        Click="Payroll_Click"/>
+
+        <Button Content="Manage Holidays"
+            Width= "250"
+            Height="45"
+            HorizontalAlignment="Center"
+            Margin="0,5"
+            Click="Holidays_Click"     />
+
+        <Button Content="Logout"
+                Width="250"
+                Height="45"
+                HorizontalAlignment="Center"
+                Margin="0,20,0,5"
+                Click="Logout_Click"/>
+
+
+    </StackPanel>
+
+</Window>

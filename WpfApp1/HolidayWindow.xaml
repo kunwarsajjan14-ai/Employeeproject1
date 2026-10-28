@@ -1,0 +1,57 @@
+﻿<Window x:Class="Employeeproject1.HolidayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Employeeproject1"
+        mc:Ignorable="d"
+        Title="HolidayWindow" Height="600" Width="600"
+        Background="Aquamarine">
+    <StackPanel Margin="40">
+        <TextBlock Text="Holiday List"
+                   FontSize="30"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="0,10,0,10"/>
+
+        <TextBlock Text="NZFTC Company and Public Holiday"
+            FontSize="16"
+            FontWeight="Bold"
+            HorizontalAlignment="Center"
+            Margin="0,10,0,25"/>
+        <!--A datagrid display data in rows and columns
+        and when we write datagrid.column it says that which column
+        should appear in my datagrid and when you write
+        datagridtextcolumn - it create a column that displays a text-->
+
+        <DataGrid x:Name="dgHolidays"
+                Height="280"
+                AutoGenerateColumns="False"
+                IsReadOnly="True"
+                Margin="0,0,0,20" SelectionChanged="dgHolidays_SelectionChanged">
+
+            <DataGrid.Columns>
+                <!-- Header - heading at the top of the column
+                     Binding  it should receive value called HolidayName
+                and display it in the column-->
+
+                <DataGridTextColumn Header="Holiday"
+                                Binding="{Binding HolidayName}"
+                                Width="*"/>
+
+                <DataGridTextColumn Header="Date"
+                     Binding="{Binding HolidayDate}"
+                     Width="200"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+        <Button Content="Back"
+          Width= "220"
+          Height="40"
+          HorizontalAlignment="Center"
+          Margin="0,5"
+          Click="Back_Click"     />
+
+    </StackPanel>
+</Window>
